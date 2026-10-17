@@ -70,7 +70,8 @@ gulp.task('zip', function zipTask() {
 		'!.gitattributes',
 		'!todo.txt',
 		'!sftp-config.json',
-		'!testing.html'
+		'!testing.html',
+		'!CLAUDE.md'
 	], { base: '.' })
 		.pipe(zip(project.name + '.zip'))
 		.pipe(gulp.dest('__build'));

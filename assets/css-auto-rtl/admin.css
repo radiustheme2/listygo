@@ -1,0 +1,57 @@
+/*=======================================================================
+= Listing Form
+=========================================================================*/
+.rtcl-single-custom-fields {
+	margin-bottom: 30px;
+}
+
+.rtcl-single-custom-fields .rtcl-section-heading {
+	display: none;
+}
+
+.rtcl-single-custom-fields .rtcl-cf-properties {
+	border-radius: 6px;
+	grid-template-columns: repeat(1, 1fr);
+}
+
+.rtcl-single-custom-fields .rtcl-cf-properties .rtcl-cfp-item {
+	padding: 30px;
+	flex-wrap: wrap;
+	color: var(--color-body);
+	flex-flow: column;
+	border-radius: 6px;
+	background-color: #ffffff;
+}
+
+.rtcl-single-custom-fields .rtcl-cf-properties .rtcl-cfp-item .rtcl-cfp-vi {
+	gap: 15px;
+	margin: 0;
+}
+
+.rtcl-single-custom-fields .rtcl-cfp-checkbox .rtcl-cfp-label-wrap {
+	margin-bottom: 25px;
+}
+
+.rtcl-has-group-title .rtcl-fb-repeater-item-fields .rtcl-fb-field:not(:nth-child(1), :nth-child(2)) {
+	display: none;
+}
+
+.rtcl-has-group-title {
+	background: #ebebf1 !important;
+	border-color: #a9a8af !important;
+}
+
+.rtcl-cfp-repeater-items .rtcl-cfp-repeater-item .rtcl-cfp-label-wrap {
+	border: 0;
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+.rtcl-cfp-repeater-items .rtcl-cfp-repeater-item .rtcl-cfp-label-wrap::after,
+.rtcl-cfp-repeater-items .rtcl-cfp-repeater-item h5.heading-title.rtcl-field-checkbox::after {
+	display: none;
+}
+
+.rtcl-cfp-repeater-items .rtcl-cfp-repeater-item .rtcl-cfp-repeater-field {
+	flex-flow: column;
+}

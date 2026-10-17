@@ -1,0 +1,38 @@
+{
+    "ajax-filter": {
+        "name": "Ajax Filter",
+        "items": [
+            {
+                "id": "search",
+                "title": "Keyword",
+                "placeholder": "Search ..."
+            },
+            {
+                "id": "category",
+                "title": "Category",
+                "type": "checkbox",
+                "hide_empty": 1,
+                "show_count": 1,
+                "more_less": 1
+            },
+            {
+                "id": "location",
+                "title": "Location",
+                "type": "checkbox",
+                "show_count": 1,
+                "more_less": 1
+            },
+            {
+                "id": "radius_filter",
+                "title": "Radius Filter"
+            },
+            {
+                "id": "price_range",
+                "title": "Price Range",
+                "min_price": "10",
+                "max_price": "50000",
+                "step": "1000"
+            }
+        ]
+    }
+}

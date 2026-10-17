@@ -1,0 +1,152 @@
+/*=======================================================================
+= Form Builder Food List
+=========================================================================*/
+.rtcl-single-faqs-wrapper {
+    padding: 30px;
+    border-radius: 6px;
+    margin-bottom: 30px;
+    background-color: $colorWhite;
+    .rtcl-section-heading-simple {
+        margin-bottom: 30px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid $colorLine;
+        h3 {
+            font-size: 22px;
+            &::after {
+                left: 0;
+                content: "";
+                height: 2px;
+                bottom: -2px;
+                min-width: 60px;
+                position: absolute;
+                background-color: $colorPrimary;
+            }
+        }
+    }
+    .rtcl-faq-repeater-items {
+        width: 100%;
+        row-gap: 10px;
+        flex-flow: column;
+        display: inline-flex;
+        .faq-item {
+            border-radius: 8px;
+            border: 1px solid $colorPrimary;
+            &.active {
+                border-color: $colorPrimary;
+            }
+        }
+
+        .faq-heading {
+            display: flex;
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: 600;
+            padding: 10px 20px;
+            align-items: center;
+            color: $colorHeading;
+            justify-content: space-between;
+        }
+
+        .active .faq-heading {
+            color: $colorWhite;
+            background-color: $colorPrimary;
+            border-radius: 7px 7px 0 0;
+        }
+
+        .faq-content {
+            display: none;
+            padding: 25px;
+            p.meta-phone {
+                margin-bottom: 0;
+            }
+        }
+
+        .collapse-btn {
+            width: 35px;
+            height: 35px;
+            padding: 0;
+            display: flex;
+            font-size: 20px;
+            border-radius: 4px;
+            align-items: center;
+            color: $colorWhite;
+            justify-content: center;
+            border: 1px solid $colorPrimary;
+            background-color: $colorPrimary;
+
+            i {
+                line-height: 1;
+            }
+        }
+
+        .active .collapse-btn {
+            color: $colorPrimary;
+            border-color: $colorWhite;
+            background-color: $colorWhite;
+        }
+
+        .iconMinus {
+            display: flex;
+        }
+
+        .iconMinus {
+            display: none;
+        }
+
+        .active {
+            .iconMinus {
+                display: flex;
+            }
+
+            .iconPlus {
+                display: none;
+            }
+
+        }
+    }
+    .rtcl-food-menu-repeater {
+        .food-menu-item {
+            display: flex;
+            gap: 15px;
+            position: relative;
+            align-items: center;
+            &:not(:last-child) {
+                border-bottom: 1px solid $colorGray5;
+                padding-bottom: 20px;
+                margin-bottom: 20px;
+            }
+            .menu-title {
+                font-size: 1.1em;
+                font-weight: 500;
+                margin-bottom: 10px;
+                color: $colorHeading;
+            }
+            .menu-price {
+                position: absolute;
+                top: 8px;
+                right: 10px;
+                font-size: 1.1em;
+                color: #000000;
+                font-weight: bold;
+            }
+            .menu-image {
+                max-width: 100px;
+                img {
+                    width: 100%;
+                    border-radius: 50%;
+                }
+            }
+            .menu-desc {
+                flex: 1;
+            }
+            @media screen and (max-width: 575px) {
+                flex-direction: column;
+                align-items: flex-start !important;
+                .menu-price {
+                    position: static !important;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}

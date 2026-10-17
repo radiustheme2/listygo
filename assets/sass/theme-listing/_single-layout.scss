@@ -1,0 +1,109 @@
+/*=======================================================================
+= Single Layout Builder
+=========================================================================*/
+.rtcl-sl-containers {
+    font-size: 16px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    .rtcl-sl-section {
+        border: none;
+        .rtcl-sl-section-header {
+            position: relative;
+            margin-bottom: 30px;
+            border-color: #e8e8e8;
+            &:after {
+                left: 0;
+                content: "";
+                height: 2px;
+                bottom: -2px;
+                min-width: 60px;
+                position: absolute;
+                background-color: var(--color-primary);
+            }
+        }
+        .rtcl-single-listing-map {
+            margin-top: 0;
+        }
+    }
+
+    .rtrs-review-wrap {
+        margin-top: 30px;
+        padding: 25px 30px 30px;
+    }
+
+    .rtcl-sl-element.rtcl-slf-videos {
+        margin-top: 30px;
+    }
+    .rtcl-section-heading-simple {
+        display: none;
+    }
+    .rtcl-single-faqs-wrapper {
+        padding: 0;
+    }
+    .rtcl-food-menu-repeater {
+        row-gap: 15px;
+        flex-flow: column;
+        display: inline-flex;
+    }
+    #doctor_chamber,
+    #food_menu {
+        .rtcl-sl-section-header {
+            margin-bottom: 30px;
+        }
+    }
+    #doctor-information {
+        .rtcl-sl-section-column {
+            row-gap: 10px;
+            flex-flow: column;
+            display: inline-flex;
+            .rtcl-sl-element-wrap {
+                display: inline-flex;
+                .rtcl-slf-label-wrap {
+                    gap: 10px;
+                    display: inline-flex;
+                }
+            }
+        }
+    }
+    .rtcl-Reviews {
+        padding: 30px;
+        border-radius: 8px;
+        background-color: $colorWhite;
+    }
+    .single-builder-event-date {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .rtcl-slider-wrapper {
+        .rtcl-slider-nav {
+            .swiper-wrapper {
+                column-gap: 11px;
+
+                .rtcl-slider-thumb-item {
+                    margin-right: 0 !important;
+                }
+            }
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            bottom: 30px;
+        }
+    }
+}
+.rtcl-sl-custom-single-layout-items-wrapper {
+    width: 100%;
+    row-gap: 30px;
+    flex-flow: column;
+    display: inline-flex;
+}
+
+.rtcl-slf-label-wrap.rtcl-repeater-group-title {
+    display: none;
+}
+
+.rtcl-slf-label-wrap.rtcl-repeater-group-title {
+    display: none;
+}
+

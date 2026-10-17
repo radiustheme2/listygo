@@ -1,0 +1,128 @@
+/*=======================================================================
+= Ajax Builder Filter
+=========================================================================*/
+// Use the theme primary for every Classified Listing color inside the filter
+.rtcl-widget-ajax-filter-wrapper,
+.rtcl-ajax-filter-wrap {
+  --rtcl-primary-color: #{$colorPrimary};
+}
+.rtcl-ajax-filter-item .rtcl-get-location {
+  color: $colorPrimary;
+}
+.rtcl-ajax-filter-item {
+  padding-top: 10px;
+  border-bottom: 1px solid #e8e8e8;
+  .rtcl-filter-title-wrap {
+    border: none;
+  }
+  .rtcl-ajax-filter-data {
+    grid-gap: 17px;
+  }
+  .rtcl-filter-content {
+    padding: 10px 30px 30px 30px;
+  }
+  .rtcl-ajax-filter-data-item .rtcl-ajax-filter-diiWrap .rtcl-load-sub-list {
+    width: 25px;
+    height: 25px;
+    font-size: 18px;
+    border-radius: 4px;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    background-color: #fff3f4;
+    .rtcl-icon {
+      color: $colorPrimary;
+    }
+  }
+  .rtcl-filter-checkbox-item {
+    label {
+      &:after {
+        width: 5px;
+        height: 10px;
+        margin-top: -6px;
+        top: 50% !important;
+        left: 8px !important;
+      }
+      &:focus {
+        outline: 1px solid $colorPrimary;
+      }
+    }
+    input.rtcl-filter-checkbox:checked+label:before {
+      border-color: $colorPrimary;
+    }
+  }
+}
+.rtcl-ajax-filter-item .rtcl-filter-checkbox-item label {
+  align-items: center;
+}
+.rtcl-ajax-filter-item .rtcl-filter-checkbox-item label:before {
+  border-color: 1px solid $colorPrimary;
+}
+.rtcl-ajax-filter-item .rtcl-filter-checkbox-item input.rtcl-filter-checkbox:checked+label:before {
+  background-color: $colorPrimary;
+}
+.rtcl-ajax-filter-item .rtcl-filter-checkbox-item label:before {
+  padding: 9px;
+}
+.rtcl-ajax-filter-item .rtcl-filter-checkbox-item label:before {
+  margin: 0 8px 0 0;
+}
+
+.rtcl-ajax-filter-item .rtcl-filter-checkbox-item label .rtcl-cat-icon {
+  margin-right: 5px;
+}
+
+// Highlight only the selected item (".active" is also added to items revealed by "More")
+.rtcl-ajax-filter-item .rtcl-filter-checkbox-item>.rtcl-ajax-filter-diiWrap>input.rtcl-filter-checkbox:checked+label .rtcl-cat-icon,
+.rtcl-ajax-filter-item .rtcl-filter-checkbox-item>.rtcl-ajax-filter-diiWrap>input.rtcl-filter-checkbox:checked+label {
+  color: $colorPrimary;
+}
+.rtcl-active-filters-wrap .rtcl-clear-filters {
+  column-gap: 5px;
+  display: inline-flex;
+}
+
+// Toggle arrow: tinted square like the sub-category toggles
+.rtcl-ajax-filter-item .rtcl-filter-title-wrap .rtcl-icon,
+.rtcl-widget-ajax-filter-class .rtcl-ajax-filter-item .rtcl-filter-title-wrap .rtcl-icon {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+  font-size: 16px;
+  border-radius: 6px;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  color: $colorPrimary;
+  background-color: #fff3f4;
+  transition: transform 0.3s, color 0.3s, background-color 0.3s;
+}
+.rtcl-ajax-filter-item .rtcl-filter-title-wrap:hover .rtcl-icon,
+.rtcl-widget-ajax-filter-class .rtcl-ajax-filter-item .rtcl-filter-title-wrap:hover .rtcl-icon {
+  color: $colorWhite;
+  background-color: $colorPrimary;
+}
+
+.rtcl-widget-ajax-filter-class .rtcl-ajax-filter-item .rtcl-filter-title-wrap:hover,
+.rtcl-widget-ajax-filter-class .rtcl-ajax-filter-item .rtcl-ajax-filter-data-item .rtcl-ajax-filter-diiWrap .rtcl-load-sub-list,
+.rtcl-ajax-filter-item .rtcl-more-less-btn .text,
+.rtcl-ajax-filter-item .rtcl-more-less-btn .text .rtcl-icon {
+  color: $colorPrimary;
+}
+
+.rtcl-ajax-pagination-wrap ul li .page-numbers, .rtcl-ajax-pagination-wrap ul li>span, nav.rtcl-pagination ul li .page-numbers, nav.rtcl-pagination ul li>span {
+  color: $colorPrimary;
+}
+
+.rtcl-ajax-pagination-wrap ul li.page-item.active span, .rtcl-ajax-pagination-wrap ul li.page-item:hover span,
+.rtcl-active-filters-wrap .rtcl-active-filters .rtcl-active-filter .af-items .afi .rtcl-remove-filter,
+.rtcl-ajax-filter-item .rtcl-noUiSlider .noUi-connect,
+.rtcl-ajax-filter-item .rtcl-noUiSlider .noUi-handle {
+  background-color: $colorPrimary;
+}
+
+.rtcl-active-filters-wrap .rtcl-active-filters .rtcl-active-filter .af-items .afi:hover,
+.rtcl-ajax-filter-item .rtcl-filter-checkbox-item label:before {
+  border-color: $colorPrimary;
+}
+

@@ -1,0 +1,37 @@
+{
+	"name": "listygo",
+	"version": "1.0.0",
+	"main": "gulpfile.js",
+	"author": "RadiusTheme",
+	"devDependencies": {
+		"@babel/core": "^7.14.8",
+		"@babel/preset-env": "^7.14.8",
+		"autoprefixer": "^10.4.21",
+		"fancy-log": "^2.0.0",
+		"gulp": "^5.0.1",
+		"gulp-babel": "^8.0.0",
+		"gulp-better-rollup": "^3.4.0",
+		"gulp-clean": "^0.4.0",
+		"gulp-clean-css": "^4.3.0",
+		"gulp-concat": "^2.6.1",
+		"gulp-install": "^1.1.0",
+		"gulp-jsbeautifier": "^3.0.1",
+		"gulp-less": "^5.0.0",
+		"gulp-minify": "^3.0.0",
+		"gulp-rtlcss": "^2.0.0",
+		"gulp-sass": "^5.0.0",
+		"gulp-uglify": "^3.0.2",
+		"less-plugin-autoprefix": "^1.4.1",
+		"plugin-error": "^2.0.1",
+		"postcss": "^8.5.3",
+		"replace-ext": "^2.0.0",
+		"rfs": "^9.0.6",
+		"rollup-plugin-babel": "^4.4.0",
+		"sass": "^1.35.2",
+		"sass-autoprefixer": "^1.0.1",
+		"terser": "^5.39.0"
+	},
+	"dependencies": {
+		"gulp-zip": "^6.1.0"
+	}
+}

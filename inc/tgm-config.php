@@ -72,7 +72,7 @@ class TGM_Config {
 			array(
 				'name'         => esc_html__('RT Framework', 'listygo'),
 				'slug'         => 'rt-framework',
-				'source'       => 'rt-framework-2.9.1.zip',
+				'source'       => 'rt-framework.zip',
 				'required'     =>  true,
 				'version'      => '2.9.1'
 			),

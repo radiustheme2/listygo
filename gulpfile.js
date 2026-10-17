@@ -52,13 +52,14 @@ gulp.task("minify-css", function (){
 });
 
 gulp.task('clean', function () {
-	return gulp.src('__build/*.*', {read: false})
+	return gulp.src('__build/*.*', {read: false, allowEmpty: true})
 		.pipe(clean());
 });
 
 gulp.task('zip', function zipTask() {
 	return gulp.src([
 		'**',
+		'!__*',
 		'!__*/**',
 		'!node_modules/**',
 		'!.git/**',
@@ -66,13 +67,14 @@ gulp.task('zip', function zipTask() {
 		'!gulpfile.js',
 		'!package.json',
 		'!package-lock.json',
+		'!bun.lock',
 		'!.gitignore',
 		'!.gitattributes',
 		'!todo.txt',
 		'!sftp-config.json',
 		'!testing.html',
 		'!CLAUDE.md'
-	], { base: '.' })
+	], { base: '.', encoding: false })
 		.pipe(zip(project.name + '.zip'))
 		.pipe(gulp.dest('__build'));
 });

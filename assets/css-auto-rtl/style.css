@@ -8025,6 +8025,10 @@ body.rtcl-account.page-template-default .rtcl-MyAccount-wrap .rtcl-MyAccount-con
 	border-color: var(--color-primary);
 }
 
+.rtcl-single-faqs-wrapper .rtcl-faq-repeater-items .faq-item.food-menu-single {
+	padding: 25px;
+}
+
 .rtcl-single-faqs-wrapper .rtcl-faq-repeater-items .faq-heading {
 	display: flex;
 	cursor: pointer;

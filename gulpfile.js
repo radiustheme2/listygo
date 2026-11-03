@@ -8,6 +8,8 @@ const cleanCSS        = require("gulp-clean-css");
 const beautify        = require('gulp-jsbeautifier');
 const clean           = require('gulp-clean');
 const zip = require('gulp-zip').default;
+const path            = require('path');
+const { Transform }   = require('stream');
 
 console.log('Zip loaded:', typeof zip);
 
@@ -75,6 +77,14 @@ gulp.task('zip', function zipTask() {
 		'!testing.html',
 		'!CLAUDE.md'
 	], { base: '.', encoding: false })
+		// Put every file inside a "listygo/" root folder so WordPress replaces the installed theme instead of duplicating it
+		.pipe(new Transform({
+			objectMode: true,
+			transform(file, enc, cb) {
+				file.path = path.join(file.base, project.name, file.relative);
+				cb(null, file);
+			}
+		}))
 		.pipe(zip(project.name + '.zip'))
 		.pipe(gulp.dest('__build'));
 });
@@ -85,7 +95,7 @@ gulp.task('watch', function(done) {
 	done();
 });
 
-gulp.task('run', gulp.parallel('scss', 'rtl', 'minify-css', 'minify-js' ));
+gulp.task('run', gulp.series('scss', gulp.parallel('rtl', 'minify-css', 'minify-js')));
 
 gulp.task('build', gulp.series('run','clean', 'zip'));
 

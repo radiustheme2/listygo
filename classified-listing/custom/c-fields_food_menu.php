@@ -48,20 +48,27 @@ if ( count( $fields ) ) :
 			$section_title = $field->getLabel();
 		}
 
-		if ( ! empty( $value ) && is_array( $value ) ) {
+		$food_menus = is_array( $value ) ? array_filter( Listing_Functions::group_menu_items( $value ), function ( $group ) {
+			return ! empty( $group['items'] );
+		} ) : [];
+
+		if ( ! empty( $food_menus ) ) {
 			?>
             <div class="rtcl-faq-repeater-items rtcl-food-menu-repeater">
 				<?php
 				$count = 1;
-				$food_menus = Listing_Functions::group_menu_items( $value );
 				foreach ( $food_menus as $rValues ) {
-					$is_active   = $count == 1 ? 'active' : '';
 					$group_title = $rValues['group_title'] ?? "Menu";
 					$items       = $rValues['items'] ?? [];
+					$is_single   = ! empty( $rValues['is_single'] );
 					if ( empty( $items ) ) {
 						continue;
 					}
-					?>
+					if ( $is_single ) { ?>
+                    <div class="faq-item food-menu-single">
+					<?php } else {
+						$is_active = $count == 1 ? 'active' : '';
+						?>
                     <div class="faq-item <?php echo esc_attr( $is_active ) ?>">
                         <div class="faq-heading">
 							<?php echo esc_html( $group_title ); ?>
@@ -72,6 +79,7 @@ if ( count( $fields ) ) :
                         </div>
 
                         <div class="faq-content">
+					<?php } ?>
 							<?php
 							foreach ( $items as $index => $item ) {
                                 $img_id = $item['menu_img'] ?? 0;
@@ -100,7 +108,12 @@ if ( count( $fields ) ) :
                                 </div>
 								<?php
 							}
-							?>
+					if ( $is_single ) { ?>
+                    </div>
+						<?php
+						continue;
+					}
+					?>
                         </div>
                     </div>
 					<?php

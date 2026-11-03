@@ -75,16 +75,20 @@ class Listing_Functions {
 		foreach ( $items as $item ) {
 			// New group start
 			if ( isset( $item['enable_group_title'] ) && $item['enable_group_title'] === 'yes' ) {
-				$current_group ++;
+				$current_group = count( $grouped );
 				$grouped[ $current_group ] = [
 					'group_title' => $item['menu_name'],
 					'items'       => []
 				];
+			} elseif ( $current_group < 0 ) {
+				// No group title yet: show the item on its own, not inside a group
+				$grouped[] = [
+					'group_title' => '',
+					'items'       => [ $item ],
+					'is_single'   => true
+				];
 			} else {
-				// Add menu item to current group
-				if ( $current_group >= 0 ) {
-					$grouped[ $current_group ]['items'][] = $item;
-				}
+				$grouped[ $current_group ]['items'][] = $item;
 			}
 		}
 
@@ -109,10 +113,15 @@ class Listing_Functions {
 					'items'       => []
 				];
 			} else {
-				// Add menu item to current group
-				if ( $current_group >= 0 ) {
-					$grouped[ $current_group ]['items'][] = $item;
+				// Items before any group title (or with no group title at all) go into a default group
+				if ( $current_group < 0 ) {
+					$current_group ++;
+					$grouped[ $current_group ] = [
+						'group_title' => esc_html__( 'Chambers', 'listygo' ),
+						'items'       => []
+					];
 				}
+				$grouped[ $current_group ]['items'][] = $item;
 			}
 		}
 
